@@ -1,0 +1,35 @@
+tmpdir - Module to automathize the configuration of the temporary directory in
+every OS supported by PERL
+
+What's the problem?
+Every PERL tool use temporary files.
+If you want your code can be simply portable on different OS, you need to select
+the correct tempory directory (the other solution is to use ./ directory).
+The purpose of this module is to automathize the configuration of the temporary
+directory in every OS supported by PERL.
+We need your help.
+We ask you to send us the correct tempory directory for every OS supported by
+PERL and to suggest us good modifies (<sanface@sanface.com>).
+
+At the moment this is the list of OS supported:
+Windows 32 bit ('95, '98, NT) c:/temp/ (or c:/windows/temp/)
+AIX Solaris IRIX Linux        /tmp/
+Mac                           /desktop folder/temp/
+OpenVMS                       /sys\$scratch/ (or SYS\$SCRATCH)
+
+If the module can't recognize your OS the temporary directory is set to ./
+
+Use testtmpdir.pl to test the module on your OS and testOS.pl to know the value
+of $^O PERL variable on your OS.
+
+Copyright 1999, SANFACE Software
+
+This module is free software; you can redistribute it and/or
+modify it under the same terms as Perl itself.
+
+Availability
+
+The latest version of this library is likely to be available from:
+http://www.sanface.com
+and at any CPAN mirror ( http://www.perl.com/CPAN/authors/id/S/SA/SANFACE/ )
+
